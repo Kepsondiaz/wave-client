@@ -2,6 +2,7 @@
 
 namespace Alal\WaveClient;
 
+use Alal\WaveClient\Console\KeepaliveCommand;
 use Alal\WaveClient\Console\LoginCommand;
 use Alal\WaveClient\Contracts\SessionStore;
 use Alal\WaveClient\Contracts\WaveClient;
@@ -41,7 +42,7 @@ class WaveClientServiceProvider extends ServiceProvider
                 __DIR__ . '/../config/wave-client.php' => config_path('wave-client.php'),
             ], 'wave-client-config');
 
-            $this->commands([LoginCommand::class]);
+            $this->commands([LoginCommand::class, KeepaliveCommand::class]);
         }
     }
 }

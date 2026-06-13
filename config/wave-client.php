@@ -25,7 +25,7 @@ return [
     'session' => [
         'store' => env('WAVE_SESSION_STORE', 'file'),
         'key'   => env('WAVE_SESSION_KEY', 'wave-client:session'),
-        'ttl'   => (int) env('WAVE_SESSION_TTL', 3600),
+        'ttl'   => (int) env('WAVE_SESSION_TTL', 604800), // 7 days — refresh via wave:keepalive
     ],
 
     'http' => [
