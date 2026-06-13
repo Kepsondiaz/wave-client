@@ -22,30 +22,6 @@ A Laravel package that automates the **Wave Business** dashboard by replaying it
 composer require alal/wave-client
 ```
 
-### Local development (path repository)
-
-Add the path repository to your app's `composer.json`:
-
-```json
-"repositories": [
-    {
-        "type": "path",
-        "url": "../wave-client",
-        "options": { "symlink": true }
-    }
-]
-```
-
-Then require it:
-
-```bash
-composer require alal/wave-client:@dev
-```
-
-The package auto-discovers its service provider and `Wave` facade — no manual registration needed.
-
----
-
 ## Configuration
 
 Publish the config file:
