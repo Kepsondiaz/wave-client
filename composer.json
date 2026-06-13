@@ -1,0 +1,48 @@
+{
+    "name": "alal/wave-client",
+    "description": "Laravel client that automates the Wave Business web dashboard by replaying its internal HTTP requests (session + OTP based).",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "wave", "wave-money", "business", "payments", "http-client"],
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alal\\WaveClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alal\\WaveClient\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alal\\WaveClient\\WaveClientServiceProvider"
+            ],
+            "aliases": {
+                "Wave": "Alal\\WaveClient\\Facades\\Wave"
+            }
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
