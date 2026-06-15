@@ -1,5 +1,5 @@
 {
-    "name": "alal/wave-client",
+    "name": "kepson/wave-client",
     "description": "Laravel client that automates the Wave Business web dashboard by replaying its internal HTTP requests (session + OTP based).",
     "type": "library",
     "license": "MIT",
