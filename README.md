@@ -19,7 +19,7 @@ A Laravel package that automates the **Wave Business** dashboard by replaying it
 ### From Packagist (once published)
 
 ```bash
-composer require alal/wave-client
+composer require kepson/wave-client
 ```
 
 ## Configuration
